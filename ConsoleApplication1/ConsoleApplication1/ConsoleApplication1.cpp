@@ -11,4 +11,6 @@ int main()
 	std::cout << window_small;
 	window_small.open();
 	std::cout << window_small;
+	C_Window_Big window_big;
+	std::cout << window_big;
 }

@@ -32,34 +32,53 @@ void C_Window::close()
 
 std::ostream& operator<<(std::ostream& out, const C_Window& obj)
 {
-	out << " ";
-	for (int i = 0; i < obj.width * 2; i++)
+	if (obj.is_opened == true)
 	{
-		out << "_";
-	}
-	out << "\n";
-	for (int i = 0; i < obj.height - 1; i++)
-	{
-		out << "|";
-		for (int j = 0; j < obj.width * 2; j++)
+		out << " ";
+		for (int i = 0; i < obj.width * 2; i++)
 		{
-			out << " ";
+			out << "_";
+		}
+		out << "\n";
+		for (int i = 0; i < obj.height - 1; i++)
+		{
+			out << "|";
+			for (int j = 0; j < obj.width * 2; j++)
+			{
+				out << " ";
+			}
+			out << "|\n";
+		}
+		out << "|";
+		for (int i = 0; i < obj.width * 2; i++)
+		{
+			out << "_";
 		}
 		out << "|\n";
 	}
-	out << "|";
-	for (int i = 0; i < obj.width * 2; i++)
-	{
-		out << "_";
-	}
-	out << "|\n";
-	if (obj.is_opened == true)
-	{
-		out << "This window is opened\n";
-	}
 	else
 	{
-		out << "This window is closed\n";
+		out << " ";
+		for (int i = 0; i < obj.width * 2; i++)
+		{
+			out << "_";
+		}
+		out << "\n";
+		for (int i = 0; i < obj.height - 1; i++)
+		{
+			out << "|";
+			for (int j = 0; j < obj.width * 2; j++)
+			{
+				out << "/";
+			}
+			out << "|\n";
+		}
+		out << "|";
+		for (int i = 0; i < obj.width * 2; i++)
+		{
+			out << "_";
+		}
+		out << "|\n";
 	}
 	return out;
 }

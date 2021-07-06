@@ -9,4 +9,6 @@ int main()
 {
 	C_Window_Small window_small;
 	std::cout << window_small;
+	window_small.open();
+	std::cout << window_small;
 }

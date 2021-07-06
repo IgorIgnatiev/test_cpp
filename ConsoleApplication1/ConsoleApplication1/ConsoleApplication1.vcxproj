@@ -140,6 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="C_Window.cpp" />
+    <ClCompile Include="C_Window_Big.cpp" />
+    <ClCompile Include="C_Window_Small.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C_Window.h" />
+    <ClInclude Include="C_Window_Big.h" />
+    <ClInclude Include="C_Window_Small.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
